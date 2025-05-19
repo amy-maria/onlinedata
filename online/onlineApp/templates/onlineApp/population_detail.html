@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}Continent Population Detail {% endblock %}
+    
+{% block content %}
+<h1>Population Detail: Is it running?</h1>
+<h2>Select a Continent</h2>
+<form method="get">
+    <label for="continent">Choose a continent to view:</label>
+    <select name="continent" id="continent">
+        <option value="">-- Select --</option>
+        {% for continent in continents %}
+            <option value="{{ continent}}" {% if continent == selected_continent %}selected{% endif %}>
+                {{ continent }}
+            </option>
+            {% endfor %}
+    </select>
+    <button type="submit">Show Graph</button>
+</form>
+{% if plot_url %}
+<h2>Population of {{ selected_continent }} Over <Time></Time></h2>
+<img scr="{{ plot_url }}" alt="Population of {{ selected_continent}}">
+{% elif selected_continent %}
+<p>No population data available for {{ selected_continent }}.</p>
+{% endif %}
+{% endblock %}

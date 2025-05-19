@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}Population Plot{% endblock %}
+    
+{% block content %}
+<h1>Population Plot: Is it running?</h1>
+<h2>Population Trends by Continent</h2>
+{% if plot_url %} 
+<img src="{{ plot_url }}" alt="Population Plot">
+{% else %}
+<p>Error generating population plot.</p>
+{% endif %}
+{% endblock %}

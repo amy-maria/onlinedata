@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+    
+{% block content %}
+<h1>Django, Is it running? Index</h1>
+<ul>
+{% load humanize %} 
+{% for pop in latest_populations %}
+<li>Continent:{{ pop.continent}} 
+    Year: {{pop.year}}
+    Population Online:{{ pop.population|intcomma }}
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}

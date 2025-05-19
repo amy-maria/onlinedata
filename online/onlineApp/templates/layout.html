@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% block title %}
+<title> World Population Online</title>
+{% endblock %}
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/" alt="home">🏠</a></li>
+            <li><a href="/about" alt="home">💡</a></li>
+        </ul>
+    </nav>
+    </header>
+   <section>
+    <h1>Population Online from Template</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quasi, aliquam sint voluptatem magni cum ut ab excepturi quibusdam, accusantium officiis cumque illo nobis soluta? Doloremque provident temporibus vel. Dolorem!</p>
+   </section>
+  <div class="content">
+{% block content %}
+  
+{% endblock %}
+</div>
+
+<footer>
+    <h6>Developed in Django by Amy Rowell &copy;</h6>
+    </footer>
+</body>
+</html>

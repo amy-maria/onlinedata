@@ -1,0 +1,36 @@
+* { /*css reset*/
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+html {
+    color-scheme: dark light;
+}
+body {
+    background-color: black;
+    color: whitesmoke;
+    min-height: 100vh;
+}
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+nav {
+    display: flex;
+    margin: 20px;
+}
+ul {
+    list-style-type: none; 
+    overflow: hidden;
+}
+nav li { 
+    float: right;
+}
+nav a {
+  display: block;
+  align-items: end;
+  padding: 8px;
+  
+}
